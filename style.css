@@ -1,0 +1,212 @@
+:root{
+    --cor-primaria: #201b2c;
+    --cor-secundaria:#77ffc8;
+    --cor-terciaria:#2f2841;
+    --cor-boxshadow: #00000056;
+    --color-cardinlogin:#00ff88;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Noto Sans', sans-serif;
+    background:var(--cor-primaria);
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+.main-login{
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    color: var(--cor-secundaria);
+    font-size: 3vw;
+}
+
+.left-login-img{
+    width: 35vw;
+
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-login{
+    width: 30%;
+    padding: 20px 30px;
+    background:var(--cor-terciaria);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px var(--cor-boxshadow);
+}
+
+.card-login > h1{
+    text-align: center;
+}
+
+.textfield > label{
+    font-size: 20px;
+}
+
+.card-login > h1{
+    color: var(--color-cardinlogin);
+    font-weight: 800;
+    margin:0;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width: 100%;
+    padding: 15px 0px;
+    text-indent: 10px;
+    border: none;
+    border-radius:10px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow:0px 10px 40px var(--cor-boxshadow);
+    outline: none;
+    box-sizing: border-box;
+}
+.textfield >label{
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield>input::placeholder{
+    color:#f0ffff94;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px;
+    margin-top: 25px;
+    border:none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color:#2b134b;
+    background:var(--color-cardinlogin);
+    cursor:pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+@media screen and (max-width: 768px){
+    .main-login{
+        gap: 30px;
+    }
+
+    .card-login{
+        width: 50%;
+    }
+
+    .left-login{
+        width: 50%;
+        height: 100%;
+    }
+
+    .left-login-img{
+        width: 100%;
+    }
+
+    .left-login > h1{
+        font-size: 30px;
+    }
+
+    .textfield > label{
+        font-size: 25px;
+    }
+
+    .textfield > input{
+        font-size: 23px;
+        padding: 18px 0px;
+    }
+
+    .btn-login{
+        margin-top: 5px;
+        padding: 24px;
+    }
+
+    
+} 
+
+
+@media screen and (max-width: 600px){   
+
+    .main-login{
+        width: 100%;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .left-login{
+        width: 90%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        'texto1 img texto2';
+        grid-template-columns: 25% 50% 25%;
+    }    
+
+    #img{
+        grid-area: img;
+    }
+
+    #texto1{
+        grid-area: texto1;
+        text-align: center;
+        font-size: 3vmax;
+    }
+
+    #texto2{
+        grid-area: texto2;
+        text-align: center;
+        font-size: 3vmax;
+    }
+
+    .left-login-img{
+        height: 300px;
+    }
+
+    .card-login{
+        width: 100%;
+        border-radius: 0px;
+        padding: 0% 25px;
+        padding-top: 10px;
+    }
+
+}
